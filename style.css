@@ -1,0 +1,21 @@
+
+body {
+    background-color: #C6C0C0;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.linije {
+    margin-top: -2vw;
+    text-shadow: 2dvw;
+}
+
+.foto {
+    border-radius: 2vw;
+
+}
+
+.
