@@ -9,19 +9,98 @@
 </head>
 
 <body>
-
-    <h1>Equipment-rental</h1>
-    <h1 class="linije">________________________________________________________________________</h1>
-    
-    <div class="image1">
-        <img src="images/download (1).jpg" alt="" class="foto">
-        <img src="images/download (2).jpg" alt="" class="foto">
-        <img src="images/download (3).jpg" alt="" class="foto">
+    <div class="top">
+        <h1>Equipment-rental</h1>
+        <h1 class="linije">________________________________________________________________________</h1>
     </div>
-<p>dmcldmc</p>
+
+    <div class="equipment-container">
+        <div class="equipment-item">
+            <h2>Tripod</h2>
+            <img src="images/download (1).jpg" alt="" class="foto">
+            <button class="status-btn" data-id="1">Available</button>
+        </div>
+        <div class="equipment-item">
+            <h2>Lighting</h2>
+            <img src="images/download (2).jpg" alt="" class="foto">
+            <button class="status-btn" data-id="2">Available</button>
+        </div>
+        <div class="equipment-item">
+            <h2>Microphone</h2>
+            <img src="images/download (3).jpg" alt="" class="foto">
+            <button class="status-btn" data-id="3">Available</button>
+        </div>
+        <div class="equipment-item">
+            <h2>Laptop</h2>
+            <img src="images/download (4).jpg" alt="" class="foto">
+            <button class="status-btn" data-id="4">Available</button>
+        </div>
+    </div>
+
+    <div class="equipment-container">
+        <div class="equipment-item">
+            <h2>Speakers</h2>
+            <img src="images/download (5).jpg" alt="" class="foto" >
+            <button class="status-btn" data-id="5">Available</button>
+        </div>
+        <div class="equipment-item">
+            <h2>Audio Mixer</h2>
+            <img src="images/download (6).jpg" alt="" class="foto">
+            <button class="status-btn" data-id="6">Available</button>
+        </div>
+        <div class="equipment-item">
+            <h2>Camera</h2>
+            <img src="images/download.jpg" alt="" class="foto">
+            <button class="status-btn" data-id="7">Available</button>
+        </div>
+        <div class="equipment-item">
+            <h2>Backdrop Panel</h2>
+            <img src="images/images.jpg" alt="" class="foto">
+            <button class="status-btn" data-id="8">Available</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="modal" id="bookingModal">
+        <h2>Equipment Booking Form</h2>
+        <form id="bookingForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" required>
+            
+            <label for="surname">Surname</label>
+            <input type="text" id="surname" required>
+            
+            <label for="period">Period (days)</label>
+            <input type="number" id="period" required>
+            
+            <label for="equipment">Choose equipment</label>
+            <select id="equipment">
+                <option value="Tripod">Tripod</option>
+                <option value="Lighting">Lighting</option>
+                <option value="Microphone">Microphone</option>
+                <option value="Laptop">Laptop</option>
+                <option value="Speakers">Speakers</option>
+                <option value="Audio Mixer">Audio Mixer</option>
+                <option value="Camera">Camera</option>
+                <option value="Мікрофон">Backdrop Panel</option>
+             
+            </select>
+
+            
+            <button type="button" class="book-btn" onclick="bookEquipment()">Reserve</button>
+        </form>
+    </div>
+
+    <div class="modal" id="unavailableModal">
+        <h2>Not available now</h2>
+        <p>Check back later</p>
+        <button class="close-btn" onclick="closeUnavailableModal()">Ok</button>
+    </div>
 
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
+  
 </body>
 
 </html>
